@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Update member</h1>
+
+<style>
+body {
+        background-image: url("https://w0.peakpx.com/wallpaper/797/342/HD-wallpaper-lazy-panda.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        font-family: Arial, sans-serif;
+        color: #db2222;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
+<form action="updaterecord/{{ mycustomer.id }}" method="post">
+{% csrf_token %}
+First Name:<br>
+<input name="first" value="{{ mycustomer.fname }}">
+<br><br>
+Last Name:<br>
+<input name="last" value="{{ mycustomer.lname }}">
+<br><br>
+Middle Initial:<br>
+<input name="middle" value="{{ mycustomer.mi }}">
+<br><br>
+Email:<br>
+<input name="email" value="{{ mycustomer.email }}">
+<br><br>
+Phone:<br>
+<input name="phone" value="{{ mycustomer.phone }}">
+<br><br>
+Avatar URL:<br>
+<input name="avatar" value="{{ mycustomer.avatar_url }}">
+<br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
+
+
+{% endblock %}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lazy Panda</title>
+    <style>
+      body {
+        background-image: url("https://w0.peakpx.com/wallpaper/797/342/HD-wallpaper-lazy-panda.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        font-family: Arial, sans-serif;
+        color: #db2222;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <style>
+.nav-line {
+      text-align: center;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(212, 210, 75, 0.856); /* white line */
+      margin-bottom: 10px;
+    }
+
+    .nav-line a {
+      color: #db2222; /* gold/yellow color for links */
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-line a:hover {
+      color: #447fff; /* light blue on hover */
+      text-decoration: underline;
+    }
+
+   
+    .overlay {
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+      color: #db2222;
+    }
+  </style>
+</head>
+
+<body>
+ 
+  <div class="nav-line">
+    <a href="http://127.0.0.1:8000/">LazyPandaShop</a> |
+    <a href="http://127.0.0.1:8000/customer">Customers List</a> |
+    <a href="http://127.0.0.1:8000/add">New Customer</a>
+  </div>
+
+  <div class="container overlay">
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+</html>

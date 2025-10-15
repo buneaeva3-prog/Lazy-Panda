@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Customer Form</title>
+</head>
+<body>
+<h1>Add Customer</h1>
+
+    <style>
+body {
+        background-image: url("https://w0.peakpx.com/wallpaper/797/342/HD-wallpaper-lazy-panda.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        font-family: Arial, sans-serif;
+        color: #db2222;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
+
+<form action="addrecord/" method="post">
+{% csrf_token %}
+First Name:<br>
+<input name="first">
+<br><br>
+Last Name:<br>
+<input name="last">
+<br><br>
+Middle Intial:<br>
+<input name="middle">
+<br><br>
+Email:<br>
+<input name="email">
+<br><br>
+Phone:<br>
+<input name="phone">
+<br><br>
+Avatar URL:<br>
+<input name="avatar">
+<br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
